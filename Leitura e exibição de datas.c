@@ -73,8 +73,8 @@ int main (int argc, char *argv[]){
     
     
     //verifica a variável e exibe a data caso tudo esteja ok
-	if (erro==0)
+    if (erro==0)
     	printf("\nDia %d de %s de %d.\n",dia,meses[mes-1],ano);
-	system("pause");
-	return (0);
+    system("pause");
+    return (0);
 }
