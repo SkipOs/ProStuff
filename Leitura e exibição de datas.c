@@ -2,53 +2,53 @@
 #include <stdlib.h>
 #include <locale.h>
 
-/*FaÁa um programa em C que leia uma data no
+/*Fa√ßa um programa em C que leia uma data no
 formato DD/MM/AAAA (ex: 01/06/2021) e
 exiba a data lida no formato: dia DD de <nome
-do mÍs> de AAAA.
-? Ex: Entra 01/06/2021 e sai ì01 de Junho de 2021î.
-? Exibir a saÌda apenas se a data for v·lida:
-? Validar o dia do mÍs (30 dias).
-? Validar o mÍs.
+do m√™s> de AAAA.
+? Ex: Entra 01/06/2021 e sai ‚Äú01 de Junho de 2021‚Äù.
+? Exibir a sa√≠da apenas se a data for v√°lida:
+? Validar o dia do m√™s (30 dias).
+? Validar o m√™s.
 ? Validar o ano a partir de 1900.
-? Dica: a funÁ„o atoi(str) converte string para int.*/
+? Dica: a fun√ß√£o atoi(str) converte string para int.*/
 
 int main (int argc, char *argv[]){
 	setlocale(LC_ALL, "Portuguese");
 	
-	int erro=0; //vari·vel de controle
+	int erro=0; //vari√°vel de controle
 	int dia,mes,vali,ano,dialim;
 	
 	//vetor dos meses
-	char meses[12][12]={"Janeiro","Fevereiro","MarÁo",
-						"Abril","Maio","Junho","Julho",
-						"Agosto","Setembro","Outubro",
-						"Novembro","Dezembro"};
+	char meses[12][12]={"Janeiro","Fevereiro","Mar√ßo",
+				"Abril","Maio","Junho","Julho",
+				"Agosto","Setembro","Outubro",
+				"Novembro","Dezembro"};
 					
-	//entrada do usu·rio				
+	//entrada do usu√°rio				
     printf ("Insira a data (Ex: 13/07/2021 = dd/mm/aaaa): ");
     scanf("%d/%d/%d",&dia,&mes,&ano);
     
     
     //confere ano
     if (ano<1900){			
-    	printf("%d n„o È um ano v·lido.\n", ano);
-    	erro++; 	//incrementa vari·vel de controle
+    	printf("%d n√£o √© um ano v√°lido.\n", ano);
+    	erro++; 	//incrementa vari√°vel de controle
 	}
 	else{			//define ano bissexto
             if (ano%4==0)	//ano bissexto
                 vali=1;
             else 
-                vali=0;		//ano n„o bissexto
+                vali=0;		//ano n√£o bissexto
     }
     
     
-    //confere o mÍs
+    //confere o m√™s
     if (mes==1 || mes==3 || mes==5 || mes==7 || mes== 8 || mes==10 || mes==11 ){
     	dialim=31;
     }
-    else if (mes==2){	//define dia caso mÍs = fevereiro
-        if (vali==0)		//caso ano n„o bissexto
+    else if (mes==2){	//define dia caso m√™s = fevereiro
+        if (vali==0)		//caso ano n√£o bissexto
             dialim=28;
 
         else			//caso ano bissexto
@@ -58,8 +58,8 @@ int main (int argc, char *argv[]){
         dialim=30;
     }
     else {
-    	printf("%d n„o È um mÍs v·lido.\n", mes);
-    	erro++; 	//incrementa vari·vel de controle
+    	printf("%d n√£o √© um m√™s v√°lido.\n", mes);
+    	erro++; 	//incrementa vari√°vel de controle
 	}
     
     
@@ -67,12 +67,12 @@ int main (int argc, char *argv[]){
     if (dia<=dialim && dia!=0)
     	dia=dia;
     else {
-    	printf("%d n„o È um dia v·lido.\n", dia);
-    	erro++; 	//incrementa vari·vel de controle
+    	printf("%d n√£o √© um dia v√°lido.\n", dia);
+    	erro++; 	//incrementa vari√°vel de controle
     }
     
     
-    //verifica a vari·vel e exibe a data caso tudo esteja ok
+    //verifica a vari√°vel e exibe a data caso tudo esteja ok
 	if (erro==0)
     	printf("\nDia %d de %s de %d.\n",dia,meses[mes-1],ano);
 	system("pause");
