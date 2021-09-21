@@ -1,6 +1,7 @@
-// Aqui ficam armazenadas as funções
+// Aqui ficam armazenadas as funÃ§Ãµes
+#include <stdio.h>
 
-// operações básicas
+// operaÃ§Ãµes bÃ¡sicas
 int soma(int x, int y){ //soma x e y
 	return x+y;
 }
@@ -14,8 +15,6 @@ int sub(int x, int y){ //subtrai y de x
 }
 
 float divi(int x, int y){ // divide x e y
-	float aux;
-	aux = x/y;
+	float aux = ((float)x/y);
 	return aux;
 }
-
