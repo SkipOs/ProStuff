@@ -1,46 +1,44 @@
 #include <stdlib.h>
 #include "funcs.h"
 
-// Aqui È o aqruivo do programa em si
+// Aqui √© o aqruivo do programa em si
 
 int main(int argc, char *argv[3]) {
 	setlocale(LC_ALL, "Portuguese");
 	
-	int aux;
+	float aux;
 	switch(atoi(argv[1])){
 		case 1: //soma
 			aux=soma((atoi(argv[2])),(atoi(argv[3])));
 		break;
 		
-		case 2://subtraÁ„o
+		case 2://subtra√ß√£o
 			aux=sub((atoi(argv[2])),(atoi(argv[3])));
 		break;
 		
-		case 3://multiplicaÁ„o
+		case 3://multiplica√ß√£o
 			aux=mult((atoi(argv[2])),(atoi(argv[3])));
 		break; 
 		
-		case 4://divis„o
+		case 4://divis√£o
 			if ((atoi(argv[3]))==0){
-				printf("Insira um valor v·lido para a divis„o\n");
+				printf("Insira um valor v√°lido para a divis√£o\n");
 				system("pause");
 				return 0;
 			}
 			else{
-				printf("O resultado da operaÁ„o È %2.f\n",divi((atoi(argv[2])),(atoi(argv[3]))));
-				system("pause");
-				return 0;
+				aux=divi((atoi(argv[2])),(atoi(argv[3])));
 			}
 		break;
 		
 		default:
-			printf("Insira um valor v·lido para a execuÁ„o\n");
+			printf("Insira um valor v√°lido para a execu√ß√£o\n");
 			system("pause");
 			return 0;
 		break;
 	}
 		
-	printf("O resultado da operaÁ„o È %d\n", aux);
+	printf("O resultado da opera√ß√£o √© %.2f\n", aux);
 	system("pause");
 	return 0;
 }
