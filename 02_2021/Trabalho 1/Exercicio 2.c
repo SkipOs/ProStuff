@@ -1,6 +1,6 @@
-/*1) 2) FaÁa um programa em linguagem C que, utilizando
-funÁ„o, calcule a matriz transposta informada pelo
-usu·rio. A quantidade de linhas e colunas pode ser
+/*2) Fa√ßa um programa em linguagem C que, utilizando
+fun√ß√£o, calcule a matriz transposta informada pelo
+usu√°rio. A quantidade de linhas e colunas pode ser
 fixa e definida previamente.*/
 
 #include <stdio.h>
