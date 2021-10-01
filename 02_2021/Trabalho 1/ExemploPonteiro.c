@@ -2,7 +2,7 @@
 #include <string.h>
 #include <locale.h>
 
-// Essa função nomeia (por referência) as posições de um vetor, de 0 a 4 e emprime logo em seguida a posição inserida
+// Essa funÃ§Ã£o nomeia (por referÃªncia) as posiÃ§Ãµes de um vetor, de 0 a 4 e emprime logo em seguida a posiÃ§Ã£o inserida
 
 void ImprimeVet(int n);
 void RecebeVet(int *n, int i);
@@ -13,19 +13,19 @@ int main(){
     int vet[5];
 
     for (i=0; i<5; i++){
-        RecebeVet(&vet[i], i); // Usa se o caractere '&' na passagem do Vet[i] pois a função espera um
-                               // parâmetro por REFERÊNCIA, ou seja, um endereço de memória!
+        RecebeVet(&vet[i], i); /* Usa se o caractere '&' na passagem do Vet[i] pois a funÃ§Ã£o espera um
+                                  parÃ¢metro por REFERÃŠNCIA, ou seja, um endereÃ§o de memÃ³ria!*/
 
-        ImprimeVet(vet[i]); // NÃO se deve colocar nada antes de Vet[i] pois a função 'ImprimeVet' 
-							// espera um VALOR, e não um endereço de memória!!!
+        ImprimeVet(vet[i]); /* NÃƒO se deve colocar nada antes de Vet[i] pois a funÃ§Ã£o 'ImprimeVet' 
+			       espera um VALOR, e nÃ£o um endereÃ§o de memÃ³ria!!!*/
        }
     return 0; 
 }
       
-void ImprimeVet(int n){ // função com um parâmetro por valor
-    printf("%d", n);//Imprime o valor de n
+void ImprimeVet(int n){ // funÃ§Ã£o com um parÃ¢metro por valor
+    printf("%d", n);// Imprime o valor de n
 }
 
-void RecebeVet(int *n, int i){ // função EXIGINDO um parâmetro por referência (int *n)
-    *n = i; 	//Uso do parêmetro por referência (*n)
+void RecebeVet(int *n, int i){ // funÃ§Ã£o EXIGINDO um parÃ¢metro por referÃªncia (int *n)
+    *n = i; 	// Uso do parÃªmetro por referÃªncia (*n)
 }
